@@ -786,6 +786,68 @@ body {
     color: var(--gray-600);
 }
 
+/* Share Section */
+.share-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #fee2e2;
+}
+
+.share-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--gray-900);
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-size: 1.125rem;
+}
+
+.share-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn-facebook {
+    background: #1877f2;
+}
+
+.share-btn-facebook:hover {
+    background: #1460c7;
+}
+
+.share-btn-twitter {
+    background: #1da1f2;
+}
+
+.share-btn-twitter:hover {
+    background: #1a8cd8;
+}
+
+.share-btn-linkedin {
+    background: #0077b5;
+}
+
+.share-btn-linkedin:hover {
+    background: #006399;
+}
+
 /* Download Section */
 .download-section {
     padding: 80px 1.5rem;
@@ -935,6 +997,17 @@ body {
     
     .steps-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .blog-card {
+        max-width: 100%;
     }
     
     .download-section h2 {

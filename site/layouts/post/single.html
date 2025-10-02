@@ -36,18 +36,21 @@
         <div class="blog-post-content">
             {{ .Content }}
         </div>
-        
-        <!-- Share Section -->
-        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #fee2e2;">
-            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--gray-900);">
-                Μοιραστείτε αυτό το άρθρο
-            </h3>
-            <div style="display: flex; gap: 1rem;">
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: white; text-decoration: none; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    
+    <!-- Share Section -->
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 1.5rem 60px;">
+        <div class="share-section">
+            <h3>Μοιραστείτε αυτό το άρθρο</h3>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-facebook" aria-label="Share on Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #1da1f2; color: white; text-decoration: none; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-twitter" aria-label="Share on Twitter">
                     <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-linkedin" aria-label="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
         </div>
