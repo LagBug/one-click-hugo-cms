@@ -1,7 +1,7 @@
 baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Kaldi"
+languageCode = "el-GR"
+languageLang = "el"
+title = "Pop & Go"
 
 # RSS, categories and tags disabled for an easy start
 # See configuration options for more details: 
@@ -9,4 +9,14 @@ title = "Kaldi"
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [params]
-images = ["img/og-image.jpg"]
+description = "Ανακάλυψε τι παίζει στα κοντινά σινεμά με το Pop & Go. Βρες όλες τις ταίνιες, προβολές, και τα σινεμά κοντά σου. Η απόλυτη εφαρμογή για τους λάτρεις του σινεμά στην Ελλάδα."
+keywords = "movies Greece, cinema Athens, theater showtimes, movie app Greece, nearby theaters, ταινίες Ελλάδα, σινεμά Αθήνα, προβολές ταινιών"
+images = ["img/mascot-full.png"]
+
+# Social Links
+instagram = "https://www.instagram.com/popandgo.gr"
+tiktok = "https://www.tiktok.com/@popandgo.gr"
+
+# App Store Links
+appStoreUrl = "https://apps.apple.com/app/6748235605"
+playStoreUrl = "https://play.google.com/store/apps/details?id=me.lagbug.popandgo"

@@ -1,15 +1,52 @@
 {{ define "main" }}
 
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ .ReadingTime }} minutes</p>
+<!-- Post Header -->
+<article style="min-height: 100vh; background: #ffffff;">
+    <div style="padding: 120px 1.5rem 60px; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <!-- Back to Blog -->
+            <a href="/post" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-red); text-decoration: none; margin-bottom: 2rem; font-weight: 600;">
+                <i class="fas fa-arrow-left"></i> Πίσω στο Blog
+            </a>
+            
+            <h1 style="font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--gray-900); margin-bottom: 1rem; line-height: 1.2;">
+                {{ .Title }}
+            </h1>
+            
+            <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; font-size: 0.875rem; color: var(--gray-600); flex-wrap: wrap;">
+                <span><i class="far fa-calendar" style="color: var(--primary-red);"></i> {{ .Date.Format "2 January 2006" }}</span>
+                <span><i class="far fa-clock" style="color: var(--primary-red);"></i> {{ .ReadingTime }} λεπτά ανάγνωσης</span>
+            </div>
+            
+            {{ if .Params.image }}
+            <div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem;">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+            </div>
+            {{ end }}
+        </div>
     </div>
-    <div class="cms mw6">
-      <p>{{ .Description }}</p>
-      {{ with .Resources.Get .Params.image }}<img src="{{ .RelPermalink }}" alt="{{ $.Title }}" />{{ end }}
-      {{ .Content }}
+    
+    <!-- Post Content -->
+    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 60px 1.5rem;">
+        <div style="font-size: 1.125rem; line-height: 1.8; color: var(--gray-900);">
+            {{ .Content }}
+        </div>
+        
+        <!-- Share Section -->
+        <div style="margin-top: 4rem; padding-top: 2rem; border-top: 2px solid #fee2e2;">
+            <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--gray-900);">
+                Μοιραστείτε αυτό το άρθρο
+            </h3>
+            <div style="display: flex; gap: 1rem;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #1877f2; color: white; text-decoration: none; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: #1da1f2; color: white; text-decoration: none; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
+</article>
+
 {{ end }}

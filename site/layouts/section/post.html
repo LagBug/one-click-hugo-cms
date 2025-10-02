@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<!-- Blog Header -->
+<section class="blog-header" style="padding: 120px 1.5rem 60px; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); text-align: center;">
+    <div class="container">
+        <h1 style="font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--gray-900); margin-bottom: 1rem;">
+            Pop & Go Blog
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
+            Νέα, άρθρα και συμβουλές για το σινεμά στην Ελλάδα
+        </p>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section style="padding: 60px 1.5rem; max-width: 1200px; margin: 0 auto;">
+    <div class="container">
+        {{ if .Pages }}
+        <!-- Blog Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            {{ range .Pages }}
+            <article style="background: white; border: 1px solid #fee2e2; border-radius: 12px; overflow: hidden; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 24px rgba(220, 38, 38, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
+                    {{ if .Params.image }}
+                    <div style="width: 100%; height: 220px; overflow: hidden;">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    {{ else }}
+                    <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">
+                        🎬
+                    </div>
+                    {{ end }}
+                    
+                    <div style="padding: 1.5rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; font-size: 0.875rem; color: var(--gray-600);">
+                            <span><i class="far fa-calendar" style="color: var(--primary-red);"></i> {{ .Date.Format "2 Jan 2006" }}</span>
+                            <span><i class="far fa-clock" style="color: var(--primary-red);"></i> {{ .ReadingTime }} λεπτά</span>
+                        </div>
+                        
+                        <h2 style="font-size: 1.5rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.75rem; line-height: 1.4;">
+                            {{ .Title }}
+                        </h2>
+                        
+                        <p style="color: var(--gray-600); line-height: 1.6; margin-bottom: 1rem;">
+                            {{ .Summary }}
+                        </p>
+                        
+                        <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-red); font-weight: 600;">
+                            Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        {{ else }}
+        <!-- Coming Soon Section -->
+        <div style="text-align: center; padding: 4rem 1.5rem; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); border-radius: 12px; margin: 2rem 0;">
+            <div style="font-size: 4rem; margin-bottom: 1.5rem;">🎬</div>
+            <h2 style="font-size: 2rem; color: var(--gray-900); margin-bottom: 1rem;">Σύντομα Διαθέσιμο</h2>
+            <p style="font-size: 1.125rem; color: var(--gray-600); max-width: 500px; margin: 0 auto;">
+                Δουλεύουμε για να σας φέρουμε το καλύτερο περιεχόμενο για το σινεμά. Μείνετε συντονισμένοι!
+            </p>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ end }}
+

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy and Terms of Service for Pop & Go - Your movie companion app">
+    <meta name="theme-color" content="#dc2626">
+    
+    <link rel="icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" href="public/mascot-only.png">
+    
+    <title>Privacy Policy & Terms - Pop & Go</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .policy-page {
+            min-height: 100vh;
+            background: #ffffff;
+            color: #1f2937;
+        }
+
+        .policy-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #fee2e2;
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--gray-900);
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: scale(1.05);
+        }
+
+        .policy-controls {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tab-group {
+            display: flex;
+            gap: 0.25rem;
+            background: #fef2f2;
+            padding: 0.25rem;
+            border-radius: 24px;
+        }
+
+        .tab-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: transparent;
+            color: var(--primary-red);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: #fee2e2;
+        }
+
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 1.5rem 60px;
+        }
+
+        .policy-header {
+            margin-bottom: 3rem;
+        }
+
+        .policy-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .updated-date {
+            color: var(--gray-600);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-intro {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .policy-section {
+            background: #fefefe;
+            border: 1px solid #fee2e2;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .policy-section:hover {
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #dc2626;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--gray-900);
+            white-space: pre-line;
+        }
+
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .contact-text {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .policy-title {
+                font-size: 2rem;
+            }
+
+            .policy-content {
+                padding: 100px 1rem 40px;
+            }
+
+            .tab-group {
+                width: 100%;
+            }
+
+            .tab-btn {
+                flex: 1;
+                font-size: 0.75rem;
+                padding: 0.5rem 0.5rem;
+            }
+
+            .policy-controls {
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .policy-nav-content {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body class="policy-page">
+    <!-- Navigation -->
+    <nav class="policy-navbar">
+        <div class="policy-nav-content">
+            <a href="index.html" class="back-link">
+                <img src="public/mascot-only.png" alt="Pop & Go" width="40" height="40" style="border-radius: 8px;">
+                <span style="font-weight: 700; font-size: 1.25rem; color: var(--primary-red);">Pop & Go</span>
+            </a>
+
+            <div class="policy-controls">
+                <div class="tab-group">
+                    <button class="tab-btn active" id="privacyTab" onclick="showTab('privacy')">
+                        Privacy Policy
+                    </button>
+                    <button class="tab-btn" id="termsTab" onclick="showTab('terms')">
+                        Terms of Service
+                    </button>
+                </div>
+                
+                <button class="lang-toggle" onclick="toggleLanguage()">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <div id="privacyContent" class="policy-content">
+        <div class="policy-header">
+            <h1 class="policy-title" data-en="Privacy Policy" data-gr="Πολιτική Απορρήτου">Privacy Policy</h1>
+            <p class="updated-date" data-en="Last updated: July 03, 2025" data-gr="Τελευταία ενημέρωση: 3 Ιουλίου 2025">Last updated: July 03, 2025</p>
+            
+            <p class="policy-intro" data-en="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You." data-gr="Στο Pop & Go, σεβόμαστε την ιδιωτικότητά σας. Αυτή η Πολιτική Απορρήτου εξηγεί πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα δεδομένα σας κατά τη χρήση της εφαρμογής μας.">
+                This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+            </p>
+            
+            <p class="policy-intro" data-en="We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy." data-gr="Χρησιμοποιούμε τα προσωπικά σας δεδομένα για να παρέχουμε και να βελτιώνουμε την υπηρεσία. Χρησιμοποιώντας την υπηρεσία, συμφωνείτε με τη συλλογή και χρήση πληροφοριών σύμφωνα με αυτήν την Πολιτική Απορρήτου.">
+                We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+            </p>
+        </div>
+
+        <!-- English Version Sections -->
+        <div class="lang-en">
+            <div class="policy-section">
+                <h2 class="section-title">Interpretation and Definitions</h2>
+                
+                <div class="subsection">
+                    <h3 class="section-subtitle">Interpretation</h3>
+                    <p class="section-content">The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="section-subtitle">Definitions</h3>
+                    <p class="section-content">For the purposes of this Privacy Policy:
+
+• Account means a unique account created for You to access our Service or parts of our Service.
+• Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+• Application refers to Pop & Go, the software program provided by the Company.
+• Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Pop & Go.
+• Country refers to: Greece
+• Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+• Personal Data is any information that relates to an identified or identifiable individual.
+• Service refers to the Application.
+• Service Provider means any natural or legal person who processes the data on behalf of the Company.
+• Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself.
+• You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Collecting and Using Your Personal Data</h2>
+                
+                <div class="subsection">
+                    <h3 class="section-subtitle">Types of Data Collected</h3>
+                    <p class="section-content">While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You.
+
+Usage Data is collected automatically when using the Service. Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+
+When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="section-subtitle">Use of Your Personal Data</h3>
+                    <p class="section-content">The Company may use Personal Data for the following purposes:
+
+• To provide and maintain our Service, including to monitor the usage of our Service.
+• To manage Your Account: to manage Your registration as a user of the Service.
+• To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication.
+• To provide You with news, special offers and general information about other goods, services and events.
+• To manage Your requests: To attend and manage Your requests to Us.
+• For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets.
+
+We may share Your personal information in the following situations:
+• With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service.
+• For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition.
+• With Affiliates: We may share Your information with Our affiliates.
+• With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
+• With Your consent: We may disclose Your personal information for any other purpose with Your consent.</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Retention of Your Personal Data</h2>
+                <p class="section-content">The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.
+
+The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Transfer of Your Personal Data</h2>
+                <p class="section-content">Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+
+Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
+
+The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Delete Your Personal Data</h2>
+                <p class="section-content">You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
+
+Our Service may give You the ability to delete certain information about You from within the Service.
+
+You may update, amend, or delete Your information at any time by contacting Us to request access to, correct, or delete any personal information that You have provided to Us.
+
+Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Disclosure of Your Personal Data</h2>
+                
+                <div class="subsection">
+                    <h3 class="section-subtitle">Business Transactions</h3>
+                    <p class="section-content">If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.</p>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="section-subtitle">Law enforcement</h3>
+                    <p class="section-content">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="section-subtitle">Other legal requirements</h3>
+                    <p class="section-content">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+
+• Comply with a legal obligation
+• Protect and defend the rights or property of the Company
+• Prevent or investigate possible wrongdoing in connection with the Service
+• Protect the personal safety of Users of the Service or the public
+• Protect against legal liability</p>
+                </div>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Security of Your Personal Data</h2>
+                <p class="section-content">The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Children's Privacy</h2>
+                <p class="section-content">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us.
+
+If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Links to Other Websites</h2>
+                <p class="section-content">Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
+
+We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Changes to this Privacy Policy</h2>
+                <p class="section-content">We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
+
+We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
+
+You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+            </div>
+        </div>
+
+        <!-- Greek Version Sections -->
+        <div class="lang-gr hidden">
+            <div class="policy-section">
+                <h2 class="section-title">1. Ποια Δεδομένα Συλλέγουμε</h2>
+                <p class="section-content">Μπορεί να συλλέγουμε προσωπικά στοιχεία όπως το όνομά σας και την τοποθεσία σας (μόνο με άδεια), καθώς και τεχνικά δεδομένα όπως διεύθυνση IP, πρόγραμμα περιήγησης και στατιστικά χρήσης.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">2. Πώς Χρησιμοποιούμε τα Δεδομένα</h2>
+                <p class="section-content">Χρησιμοποιούμε τα δεδομένα σας για να προσωποποιήσουμε την εμπειρία σας, να βελτιώσουμε την απόδοση και να σας παρέχουμε ακριβείς προβολές ταινιών.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">3. Cookies & Παρακολούθηση</h2>
+                <p class="section-content">Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας. Αυτά αποθηκεύουν προτιμήσεις και μας βοηθούν να αναλύουμε τη χρήση. Μπορείτε να τα απενεργοποιήσετε από τις ρυθμίσεις του browser σας.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">4. Ασφάλεια Δεδομένων</h2>
+                <p class="section-content">Τα δεδομένα σας αποθηκεύονται με ασφάλεια και προστατεύονται με σύγχρονα πρότυπα κρυπτογράφησης. Ωστόσο, κανένα σύστημα δεν είναι 100% ασφαλές.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">5. Τα Δικαιώματά Σας</h2>
+                <p class="section-content">Έχετε το δικαίωμα πρόσβασης, διόρθωσης ή διαγραφής των δεδομένων σας. Επικοινωνήστε μαζί μας στο hi@popandgo.gr</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">6. Ενημερώσεις Πολιτικής</h2>
+                <p class="section-content">Ενδέχεται να ενημερώνουμε την Πολιτική Απορρήτου κατά διαστήματα. Οι αλλαγές θα εμφανίζονται σε αυτή τη σελίδα με νέα ημερομηνία.</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <p class="contact-text" data-en="If You have any questions about this Privacy Policy, You can contact us at hi@popandgo.gr" data-gr="Για ερωτήσεις, επικοινωνήστε στο hi@popandgo.gr">
+                If You have any questions about this Privacy Policy, You can contact us at hi@popandgo.gr
+            </p>
+        </div>
+    </div>
+
+    <!-- Terms of Service Content -->
+    <div id="termsContent" class="policy-content hidden">
+        <div class="policy-header">
+            <h1 class="policy-title" data-en="Terms of Service" data-gr="Όροι Χρήσης">Terms of Service</h1>
+            <p class="updated-date" data-en="Last updated: July 03, 2025" data-gr="Τελευταία ενημέρωση: 3 Ιουλίου 2025">Last updated: July 03, 2025</p>
+            
+            <p class="policy-intro" data-en="Please read these Terms of Service carefully before using Our Service." data-gr="Παρακαλώ διαβάστε αυτούς τους Όρους Χρήσης προσεκτικά πριν χρησιμοποιήσετε την υπηρεσία μας.">
+                Please read these Terms of Service carefully before using Our Service.
+            </p>
+            
+            <p class="policy-intro" data-en="Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service." data-gr="Η πρόσβαση και η χρήση της υπηρεσίας εξαρτάται από την αποδοχή και συμμόρφωσή σας με αυτούς τους όρους.">
+                Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+            </p>
+
+            <p class="policy-intro" data-en="By accessing or using the Service You agree to be bound by these Terms. If You disagree with any part of the terms then You may not access the Service." data-gr="Χρησιμοποιώντας την υπηρεσία συμφωνείτε να δεσμευτείτε από αυτούς τους όρους.">
+                By accessing or using the Service You agree to be bound by these Terms. If You disagree with any part of the terms then You may not access the Service.
+            </p>
+        </div>
+
+        <!-- English Version -->
+        <div class="lang-en">
+            <div class="policy-section">
+                <h2 class="section-title">Definitions</h2>
+                <p class="section-content">For the purposes of these Terms of Service ("Terms"):
+
+• Application (also referred to as the "Service") means the Pop & Go mobile or web application provided by the Company.
+• Company (referred to as either "the Company", "We", "Us" or "Our") refers to Pop & Go.
+• You ("User") means the individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Access to the Service</h2>
+                <p class="section-content">You do not need to create an account to use the Service. We reserve the right to suspend, restrict or discontinue the Service, or any portion of it, at any time without notice.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Intellectual Property</h2>
+                <p class="section-content">The Service and all of its original content, features and functionality are and will remain the exclusive property of the Company and its licensors. The Service is protected by copyright, trademark, and other laws of both Greece and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of the Company.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Prohibited Uses</h2>
+                <p class="section-content">You may use the Service only for lawful purposes and in accordance with these Terms. You agree not to use the Service:
+
+• In any way that violates any applicable national or international law or regulation.
+• For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way.
+• To transmit, or procure the sending of, any advertising or promotional material without Our prior written consent.
+• To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person.
+• In any manner that could disable, overburden, damage, or impair the Service or interfere with any other party's use of the Service.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Links to Other Websites</h2>
+                <p class="section-content">Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company. The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party web sites or services.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Termination</h2>
+                <p class="section-content">We may terminate or suspend Your access to the Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms. Upon termination, Your right to use the Service will cease immediately.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Limitation of Liability</h2>
+                <p class="section-content">To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service).</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">"AS IS" Disclaimer</h2>
+                <p class="section-content">The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company expressly disclaims all warranties, whether express, implied, statutory, or otherwise.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Governing Law</h2>
+                <p class="section-content">The laws of Greece, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Dispute Resolution</h2>
+                <p class="section-content">If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2 class="section-title">Changes to These Terms</h2>
+                <p class="section-content">We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect.
+
+By continuing to access or use Our Service after revisions become effective, You agree to be bound by the revised terms.</p>
+            </div>
+        </div>
+
+        <!-- Greek Version -->
+        <div class="lang-gr hidden">
+            <div class="policy-section">
+                <h2 class="section-title">Ορισμοί</h2>
+                <p class="section-content">Για τους σκοπούς αυτών των Όρων Χρήσης:
+
+• Εφαρμογή αναφέρεται στο Pop & Go
+• Εταιρεία αναφέρεται στο Pop & Go
+• Εσείς αναφέρεται στον χρήστη της υπηρεσίας</p>
+            </div>
+        </div>
+
+        <div class="contact-box">
+            <p class="contact-text" data-en="If You have any questions about these Terms, You can contact us at hi@popandgo.gr" data-gr="Για ερωτήσεις, επικοινωνήστε στο hi@popandgo.gr">
+                If You have any questions about these Terms, You can contact us at hi@popandgo.gr
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'en';
+        let currentTab = 'privacy';
+
+        function showTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.getElementById('privacyTab').classList.toggle('active', tab === 'privacy');
+            document.getElementById('termsTab').classList.toggle('active', tab === 'terms');
+            
+            // Update content visibility
+            document.getElementById('privacyContent').classList.toggle('hidden', tab !== 'privacy');
+            document.getElementById('termsContent').classList.toggle('hidden', tab !== 'terms');
+            
+            // Update tab button text based on language
+            updateTabButtonText();
+        }
+
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'gr' : 'en';
+            updateLanguage();
+            
+            // Update button text
+            const langText = document.getElementById('langText');
+            langText.textContent = currentLanguage === 'en' ? 'GR' : 'EN';
+        }
+
+        function updateTabButtonText() {
+            const privacyTab = document.getElementById('privacyTab');
+            const termsTab = document.getElementById('termsTab');
+            
+            if (currentLanguage === 'en') {
+                privacyTab.textContent = 'Privacy Policy';
+                termsTab.textContent = 'Terms of Service';
+            } else {
+                privacyTab.textContent = 'Πολιτική Απορρήτου';
+                termsTab.textContent = 'Όροι Χρήσης';
+            }
+        }
+
+        function updateLanguage() {
+            // Update elements with data-en and data-gr attributes
+            const elements = document.querySelectorAll('[data-en][data-gr]');
+            elements.forEach(element => {
+                const text = element.getAttribute(`data-${currentLanguage}`);
+                if (text) {
+                    element.textContent = text;
+                }
+            });
+
+            // Show/hide language-specific sections
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden', currentLanguage !== 'en');
+            });
+            document.querySelectorAll('.lang-gr').forEach(el => {
+                el.classList.toggle('hidden', currentLanguage !== 'gr');
+            });
+
+            // Update tab button text
+            updateTabButtonText();
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLanguage();
+        });
+    </script>
+</body>
+</html>
+

@@ -1,13 +1,73 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="popcorn-container">
+        <div class="popcorn">🍿</div>
+        <div class="popcorn">🍿</div>
+        <div class="popcorn">🍿</div>
+        <div class="popcorn">🍿</div>
+        <div class="popcorn">🍿</div>
+        <div class="popcorn">🍿</div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="{{ .Params.hero.titleEn }}" data-gr="{{ .Params.hero.titleGr }}">
+                {{ .Params.hero.titleGr }}
+            </h1>
+            
+            <p class="hero-subtitle" data-en="{{ .Params.hero.subtitleEn }}" data-gr="{{ .Params.hero.subtitleGr }}">
+                {{ .Params.hero.subtitleGr }}
+            </p>
+            
+            <div class="download-buttons">
+                <a href="{{ .Site.Params.appStoreUrl }}" class="download-btn">
+                    <img src="/img/apple-icon.png" alt="Apple" width="26" height="26">
+                    <div class="btn-text">
+                        <span class="small" data-en="Available on the" data-gr="Διαθέσιμο στο">Διαθέσιμο στο</span>
+                        <span class="large">App Store</span>
+                    </div>
+                </a>
+                
+                <a href="{{ .Site.Params.playStoreUrl }}" class="download-btn">
+                    <img src="/img/playstore-icon.png" alt="Google Play" width="26" height="26">
+                    <div class="btn-text">
+                        <span class="small" data-en="Available on the" data-gr="Διαθέσιμο στο">Διαθέσιμο στο</span>
+                        <span class="large">Play Store</span>
+                    </div>
+                </a>
+            </div>
+            
+            <p class="hero-playful" data-en="{{ .Params.hero.playfulEn }}" data-gr="{{ .Params.hero.playfulGr }}">
+                {{ .Params.hero.playfulGr }}
+            </p>
+        </div>
+    </div>
+</section>
 
-{{ partial "short-text" .Params.blurb}}
-
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="container">
+        <div class="section-header">
+            <h2 data-en="{{ .Params.howItWorks.titleEn }}" data-gr="{{ .Params.howItWorks.titleGr }}">
+                {{ .Params.howItWorks.titleGr }}
+            </h2>
+            <p data-en="{{ .Params.howItWorks.subtitleEn }}" data-gr="{{ .Params.howItWorks.subtitleGr }}">
+                {{ .Params.howItWorks.subtitleGr }}
+            </p>
+        </div>
+        
+        <div class="steps-grid">
+            {{ range .Params.howItWorks.steps }}
+            <div class="step">
+                <div class="step-number">{{ .number }}</div>
+                <h3 data-en="{{ .titleEn }}" data-gr="{{ .titleGr }}">{{ .titleGr }}</h3>
+                <p data-en="{{ .descriptionEn }}" data-gr="{{ .descriptionGr }}">{{ .descriptionGr }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
 
 {{ end }}
