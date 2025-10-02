@@ -70,4 +70,69 @@
     </div>
 </section>
 
+<!-- Blog Section -->
+<section class="blog-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 data-en="Latest from the Blog" data-gr="Τελευταία από το Blog">Τελευταία από το Blog</h2>
+            <p data-en="Stay updated with movie news and cinema tips" data-gr="Μείνετε ενημερωμένοι με νέα για ταινίες και συμβουλές">
+                Μείνετε ενημερωμένοι με νέα για ταινίες και συμβουλές
+            </p>
+        </div>
+
+        {{ $posts := where .Site.RegularPages "Type" "post" }}
+        {{ if $posts }}
+        <!-- Recent Blog Posts -->
+        <div class="blog-grid">
+            {{ range first 3 $posts }}
+            <article class="blog-card">
+                <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
+                    {{ if .Params.image }}
+                    <div class="blog-card-image">
+                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                    </div>
+                    {{ else }}
+                    <div class="blog-card-image" style="font-size: 4rem;">
+                        🎬
+                    </div>
+                    {{ end }}
+                    
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar"></i> {{ .Date.Format "2 Jan 2006" }}</span>
+                            <span><i class="far fa-clock"></i> {{ .ReadingTime }} λεπτά</span>
+                        </div>
+                        
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Summary }}</p>
+                        
+                        <span class="blog-read-more" data-en="Read more" data-gr="Διαβάστε περισσότερα">
+                            Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </a>
+            </article>
+            {{ end }}
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="/post" class="blog-view-all" data-en="View All Posts" data-gr="Δείτε Όλα τα Άρθρα">
+                Δείτε Όλα τα Άρθρα <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        {{ else }}
+        <!-- Coming Soon Message -->
+        <div class="blog-coming-soon">
+            <div class="blog-icon">📰</div>
+            <p data-en="Blog posts coming soon! We'll be sharing movie news, reviews, and cinema tips." data-gr="Σύντομα άρθρα στο blog! Θα μοιραστούμε νέα για ταινίες, κριτικές και συμβουλές για το σινεμά.">
+                Σύντομα άρθρα στο blog! Θα μοιραστούμε νέα για ταινίες, κριτικές και συμβουλές για το σινεμά.
+            </p>
+            <a href="/post" class="blog-view-all" data-en="Visit Blog" data-gr="Επισκεφτείτε το Blog">
+                Επισκεφτείτε το Blog <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
 {{ end }}
