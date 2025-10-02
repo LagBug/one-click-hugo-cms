@@ -23,7 +23,12 @@
                 <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
                     {{ if .Params.image }}
                     <div style="width: 100%; height: 220px; overflow: hidden;">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {{ $image := .Resources.GetMatch .Params.image }}
+                        {{ if $image }}
+                        <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {{ else }}
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: 100%; object-fit: cover;">
+                        {{ end }}
                     </div>
                     {{ else }}
                     <div style="width: 100%; height: 220px; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); display: flex; align-items: center; justify-content: center; font-size: 4rem; position: relative; overflow: hidden;">

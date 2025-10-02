@@ -20,7 +20,12 @@
             
             {{ if .Params.image }}
             <div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem;">
-                <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                {{ $image := .Resources.GetMatch .Params.image }}
+                {{ if $image }}
+                <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                {{ else }}
+                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                {{ end }}
             </div>
             {{ end }}
         </div>

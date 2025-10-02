@@ -10,6 +10,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "Blog Posts" # Used in the UI
     folder: "site/content/post" # The path to the folder where the documents are stored
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
+    media_folder: "" # Store images in the same folder as the post
+    public_folder: "" # Reference images without a path prefix
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}

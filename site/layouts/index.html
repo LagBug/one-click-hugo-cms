@@ -89,7 +89,12 @@
                 <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
                     {{ if .Params.image }}
                     <div class="blog-card-image">
-                        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+                        {{ $image := .Resources.GetMatch .Params.image }}
+                        {{ if $image }}
+                        <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+                        {{ else }}
+                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        {{ end }}
                     </div>
                     {{ else }}
                     <div class="blog-card-image" style="font-size: 4rem;">
