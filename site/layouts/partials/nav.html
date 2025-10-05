@@ -2,31 +2,36 @@
 <nav class="navbar">
     <div class="container">
         <div class="nav-content">
-            <!-- Social Links (Desktop) -->
-            <div class="social-links desktop-only">
-                <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
-                    <i class="fab fa-instagram"></i>
+            <!-- Left Side: Logo + Nav Links -->
+            <div class="nav-left">
+                <a href="/" class="logo-link">
+                    <div class="logo">
+                        <img src="/img/mascot-only.png" alt="{{ .Site.Title }}" width="40" height="40">
+                        <span class="logo-text">{{ .Site.Title }}</span>
+                    </div>
                 </a>
-                <a href="{{ .Site.Params.tiktok }}" target="_blank" rel="noopener noreferrer" class="social-icon tiktok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+                
+                <!-- Navigation Links (Desktop) -->
+                <div class="nav-links desktop-only">
+                    <a href="/" class="nav-link" data-en="Home" data-gr="Αρχική">Αρχική</a>
+                    <a href="/post" class="nav-link" data-en="Blog" data-gr="Blog">Blog</a>
+                </div>
             </div>
             
-            <!-- Logo -->
-            <a href="/" style="text-decoration: none;">
-                <div class="logo">
-                    <img src="/img/mascot-only.png" alt="{{ .Site.Title }}" width="40" height="40">
-                    <span class="logo-text">{{ .Site.Title }}</span>
+            <!-- Right Side Actions -->
+            <div class="nav-right">
+                <!-- Social Links (Desktop) -->
+                <div class="social-links desktop-only">
+                    <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="{{ .Site.Params.tiktok }}" target="_blank" rel="noopener noreferrer" class="social-icon tiktok" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
-            </a>
-            
-            <!-- Language Toggle & Mobile Menu -->
-            <div class="nav-actions">
-                <button class="lang-toggle" id="langToggle">
-                    <i class="fas fa-globe"></i>
-                    <span id="langText">EN</span>
-                </button>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -39,7 +44,13 @@
 <!-- Mobile Drawer -->
 <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-content">
-        <h3>Follow Us</h3>
+        <h3 data-en="Menu" data-gr="Μενού">Μενού</h3>
+        <div class="mobile-nav-links">
+            <a href="/" class="mobile-nav-link" data-en="Home" data-gr="Αρχική">Αρχική</a>
+            <a href="/post" class="mobile-nav-link" data-en="Blog" data-gr="Blog">Blog</a>
+        </div>
+        
+        <h3 data-en="Follow Us" data-gr="Ακολουθήστε μας">Ακολουθήστε μας</h3>
         <div class="social-links">
             <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
                 <i class="fab fa-instagram"></i>

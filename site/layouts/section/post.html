@@ -1,57 +1,86 @@
 {{ define "main" }}
 
-<!-- Blog Header -->
-<section class="blog-header" style="padding: 120px 1.5rem 60px; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); text-align: center;">
-    <div class="container">
-        <h1 style="font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--gray-900); margin-bottom: 1rem;">
-            Pop & Go Blog
-        </h1>
-        <p style="font-size: 1.25rem; color: var(--gray-600); max-width: 600px; margin: 0 auto;">
-            Νέα, άρθρα και συμβουλές για το σινεμά στην Ελλάδα
-        </p>
-    </div>
-</section>
-
 <!-- Blog Content -->
-<section style="padding: 60px 1.5rem; max-width: 1200px; margin: 0 auto;">
+<section class="blog-listing">
     <div class="container">
         {{ if .Pages }}
-        <!-- Blog Grid -->
-        <div class="blog-grid">
-            {{ range .Pages }}
-            <article class="blog-card">
-                <a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">
-                    {{ if .Params.image }}
-                    <div class="blog-card-image">
-                        {{ $image := .Resources.GetMatch .Params.image }}
+        {{ $pages := .Pages.ByDate.Reverse }}
+        {{ if gt (len $pages) 0 }}
+        <!-- Featured Article -->
+        {{ $featured := index $pages 0 }}
+        <article class="blog-featured">
+            <a href="{{ $featured.Permalink }}" class="blog-featured-link">
+                <div class="blog-featured-image">
+                    {{ if $featured.Params.image }}
+                        {{ $image := $featured.Resources.GetMatch $featured.Params.image }}
                         {{ if $image }}
-                        <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+                        <img src="{{ $image.RelPermalink }}" alt="{{ $featured.Title }}">
                         {{ else }}
-                        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                        <img src="{{ $featured.Params.image | relURL }}" alt="{{ $featured.Title }}">
                         {{ end }}
-                    </div>
                     {{ else }}
-                    <div class="blog-card-image" style="font-size: 4rem;">
-                        🎬
-                    </div>
+                    <div class="blog-featured-placeholder">🎬</div>
                     {{ end }}
-                    
-                    <div class="blog-card-content">
-                        <div class="blog-card-meta">
-                            <span><i class="far fa-calendar"></i> {{ .Date.Format "2 Jan 2006" }}</span>
-                            <span><i class="far fa-clock"></i> {{ .ReadingTime }} λεπτά</span>
-                        </div>
-                        
-                        <h3>{{ .Title }}</h3>
-                        
-                        <span class="blog-read-more">
-                            Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i>
-                        </span>
+                    <div class="blog-featured-badge" data-en="Featured" data-gr="Προτεινόμενο">Προτεινόμενο</div>
+                </div>
+                <div class="blog-featured-content">
+                    <div class="blog-card-meta">
+                        <span><i class="far fa-calendar"></i> {{ $featured.Date.Format "2 Jan 2006" }}</span>
+                        <span><i class="far fa-clock"></i> {{ $featured.ReadingTime }} λεπτά</span>
                     </div>
-                </a>
-            </article>
-            {{ end }}
+                    <h2 class="blog-featured-title">{{ $featured.Title }}</h2>
+                    {{ if $featured.Summary }}
+                    <p class="blog-featured-excerpt">{{ $featured.Summary }}</p>
+                    {{ end }}
+                    <span class="blog-read-more" data-en="Read Article" data-gr="Διαβάστε το άρθρο">
+                        Διαβάστε το άρθρο <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+        </article>
+        {{ end }}
+
+        <!-- Recent Articles Grid -->
+        {{ if gt (len $pages) 1 }}
+        <div class="blog-recent-section">
+            <h2 class="blog-section-title" data-en="Recent Articles" data-gr="Πρόσφατα Άρθρα">Πρόσφατα Άρθρα</h2>
+            <div class="blog-grid">
+                {{ range after 1 $pages }}
+                <article class="blog-card">
+                    <a href="{{ .Permalink }}" class="blog-card-link">
+                        {{ if .Params.image }}
+                        <div class="blog-card-image">
+                            {{ $image := .Resources.GetMatch .Params.image }}
+                            {{ if $image }}
+                            <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+                            {{ else }}
+                            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                            {{ end }}
+                        </div>
+                        {{ else }}
+                        <div class="blog-card-image">
+                            <div class="blog-card-placeholder">🎬</div>
+                        </div>
+                        {{ end }}
+                        
+                        <div class="blog-card-content">
+                            <div class="blog-card-meta">
+                                <span><i class="far fa-calendar"></i> {{ .Date.Format "2 Jan 2006" }}</span>
+                                <span><i class="far fa-clock"></i> {{ .ReadingTime }} λεπτά</span>
+                            </div>
+                            
+                            <h3 class="blog-card-title">{{ .Title }}</h3>
+                            
+                            <span class="blog-read-more" data-en="Read more" data-gr="Διαβάστε περισσότερα">
+                                Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </a>
+                </article>
+                {{ end }}
+            </div>
         </div>
+        {{ end }}
         {{ else }}
         <!-- Coming Soon Section -->
         <div style="text-align: center; padding: 4rem 1.5rem; background: linear-gradient(135deg, #fef7f7 0%, #fdf2f8 100%); border-radius: 12px; margin: 2rem 0;">
