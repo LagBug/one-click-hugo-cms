@@ -1,6 +1,7 @@
 ---
 title: Σινεμά με 2€ σε όλη την Ελλάδα τον Οκτώβρη
 date: 2025-10-10T15:54:44.253Z
+slug: "20251006104154"
 description: Η μεγάλη γιορτή του σινεμά τον Οκτώβρη μας πηγαίνει σινεμά με μόνο
   2€, σε ολόκληρη την Ελλάδα.
 image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog-media-1.unidays.world%2Fmedia%2Fposts%2Fee820851-5b89-4280-b553-1a2e54998a71%2Fa04b9d48-3afd-4b59-8478-2a19921e4ee2&f=1&nofb=1&ipt=e9b9e140f19a253cbeaafc3cb9e741eabc9b28ed1d1f01f94538080af0ce1a51
