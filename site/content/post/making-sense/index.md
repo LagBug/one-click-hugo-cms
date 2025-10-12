@@ -1,11 +1,11 @@
 ---
-title: Πώς βρίσκω τι ταινίες παίζουν στα σινεμά;
-slug: "20251006104151"
-date: 2025-10-06T10:41:51.533Z
+title: Πώς να βρεις τι ταινίες παίζουν τα σινεμά;
+slug: "20251005174246"
+date: 2025-10-05T17:42:46.063Z
 description: Το Pop & Go είναι μια εφαρμογή που φέρνει τον κόσμο του σινεμά
   δίπλα σου, προσφέροντας άμεση και εύκολη ενημέρωση για τις ταινίες και τις
   προβολές στα σινεμά της Ελλάδας.
-image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tagvenue.com%2Fimages%2Flocation-pages%2F1920x1080%2F7383.jpg&f=1&nofb=1&ipt=879a2f6833b4f27d1c080ee8c82d3b93893c24fc91def06b680c83dc692c22e8
+image: mascot-full.png
 ---
 Αν είσαι από αυτούς που λατρεύουν τις ταινίες αλλά βαριούνται να ψάχνουν σε δεκάδες sites για να βρουν πού και πότε παίζει κάτι, τότε διάβασε παρακάτω γιατί αυτό θα σου αρέσει!
 
@@ -21,8 +21,4 @@ image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.tagvenue.
 * Η εφαρμογή είναι πανεύκολη στη χρήση.
 * Είναι διαθέσιμη για iOS και Android, άρα ό,τι κινητό κι αν έχεις, είσαι καλυμμένος.
 
-
-
-[Κατέβασε την για iPhone.](https://apps.apple.com/app/6748235605)
-
-[Κατέβασε την για Android.](https://play.google.com/store/apps/details?id=me.lagbug.popandgo)
+> Κατέβασε την, και έφυγες για σινεμά!

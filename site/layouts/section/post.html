@@ -14,9 +14,9 @@
                     {{ if $featured.Params.image }}
                         {{ $image := $featured.Resources.GetMatch $featured.Params.image }}
                         {{ if $image }}
-                        <img src="{{ $image.RelPermalink }}" alt="{{ $featured.Title }}">
+                        <img src="{{ $image.RelPermalink }}" alt="{{ or $featured.Title $featured.Slug }}">
                         {{ else }}
-                        <img src="{{ $featured.Params.image | relURL }}" alt="{{ $featured.Title }}">
+                        <img src="{{ $featured.Params.image | relURL }}" alt="{{ or $featured.Title $featured.Slug }}">
                         {{ end }}
                     {{ else }}
                     <div class="blog-featured-placeholder">🎬</div>
@@ -28,7 +28,7 @@
                         <span><i class="far fa-calendar"></i> {{ $featured.Date.Format "2 Jan 2006" }}</span>
                         <span><i class="far fa-clock"></i> {{ $featured.ReadingTime }} λεπτά</span>
                     </div>
-                    <h2 class="blog-featured-title">{{ $featured.Title }}</h2>
+                    <h2 class="blog-featured-title">{{ with $featured.Title }}{{ . }}{{ else }}{{ $featured.Slug }}{{ end }}</h2>
                     {{ if $featured.Summary }}
                     <p class="blog-featured-excerpt">{{ $featured.Summary }}</p>
                     {{ end }}
@@ -52,9 +52,9 @@
                         <div class="blog-card-image">
                             {{ $image := .Resources.GetMatch .Params.image }}
                             {{ if $image }}
-                            <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}">
+                            <img src="{{ $image.RelPermalink }}" alt="{{ or .Title .Slug }}">
                             {{ else }}
-                            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+                            <img src="{{ .Params.image | relURL }}" alt="{{ or .Title .Slug }}">
                             {{ end }}
                         </div>
                         {{ else }}
@@ -69,7 +69,7 @@
                                 <span><i class="far fa-clock"></i> {{ .ReadingTime }} λεπτά</span>
                             </div>
                             
-                            <h3 class="blog-card-title">{{ .Title }}</h3>
+                            <h3 class="blog-card-title">{{ with .Title }}{{ . }}{{ else }}{{ .Slug }}{{ end }}</h3>
                             
                             <span class="blog-read-more" data-en="Read more" data-gr="Διαβάστε περισσότερα">
                                 Διαβάστε περισσότερα <i class="fas fa-arrow-right"></i>

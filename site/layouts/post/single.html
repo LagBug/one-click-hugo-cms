@@ -10,7 +10,7 @@
             </a>
             
             <h1 style="font-size: clamp(2rem, 6vw, 3rem); font-weight: 700; color: var(--gray-900); margin-bottom: 1rem; line-height: 1.2;">
-                {{ .Title }}
+                {{ with .Title }}{{ . }}{{ else }}{{ .Slug }}{{ end }}
             </h1>
             
             <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem; font-size: 0.875rem; color: var(--gray-600); flex-wrap: wrap;">
@@ -22,9 +22,9 @@
             <div style="border-radius: 12px; overflow: hidden; margin-bottom: 2rem;">
                 {{ $image := .Resources.GetMatch .Params.image }}
                 {{ if $image }}
-                <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                <img src="{{ $image.RelPermalink }}" alt="{{ or .Title .Slug }}" style="width: 100%; height: auto; display: block;">
                 {{ else }}
-                <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" style="width: 100%; height: auto; display: block;">
+                <img src="{{ .Params.image | relURL }}" alt="{{ or .Title .Slug }}" style="width: 100%; height: auto; display: block;">
                 {{ end }}
             </div>
             {{ end }}
@@ -46,10 +46,10 @@
                 <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-facebook" aria-label="Share on Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-twitter" aria-label="Share on Twitter">
+                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ or .Title .Slug }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-twitter" aria-label="Share on Twitter">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-linkedin" aria-label="Share on LinkedIn">
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ or .Title .Slug }}" target="_blank" rel="noopener noreferrer" class="share-btn share-btn-linkedin" aria-label="Share on LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
             </div>
