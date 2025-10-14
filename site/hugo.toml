@@ -1,4 +1,5 @@
-baseurl = "/"
+baseurl = "https://popandgo.gr/"
+canonifyURLs = true
 languageCode = "el-GR"
 languageLang = "el"
 title = "Pop & Go"
