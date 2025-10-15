@@ -9,12 +9,14 @@ collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Blog Posts" # Used in the UI
     folder: "site/content/post" # The path to the folder where the documents are stored
+    slug: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"
     path: "{{slug}}/index" # Each document is inside a folder with the slug name.
     media_folder: "" # Store images in the same folder as the post
     public_folder: "" # Reference images without a path prefix
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Slug (ID)", name: "slug", widget: "string", required: false, default: "{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Featured Image", name: "image", widget: "image", required: false}

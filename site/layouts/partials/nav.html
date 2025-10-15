@@ -22,6 +22,11 @@
             <div class="nav-right">
                 <!-- Social Links (Desktop) -->
                 <div class="social-links desktop-only">
+                    {{ with .Site.Params.facebook }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    {{ end }}
                     <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
@@ -52,6 +57,11 @@
         
         <h3 data-en="Follow Us" data-gr="Ακολουθήστε μας">Ακολουθήστε μας</h3>
         <div class="social-links">
+            {{ with .Site.Params.facebook }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="social-icon facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            {{ end }}
             <a href="{{ .Site.Params.instagram }}" target="_blank" rel="noopener noreferrer" class="social-icon instagram">
                 <i class="fab fa-instagram"></i>
             </a>

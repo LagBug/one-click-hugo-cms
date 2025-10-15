@@ -13,6 +13,7 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 post = "/post/:slug/"
 
 [params]
+homeTitle = "Pop & Go - σινεμά και ταινίες στην Ελλάδα"
 description = "Ανακάλυψε τι παίζει στα κοντινά σινεμά με το Pop & Go. Βρες όλες τις ταίνιες, προβολές, και τα σινεμά κοντά σου. Η απόλυτη εφαρμογή για τους λάτρεις του σινεμά στην Ελλάδα."
 keywords = "movies Greece, cinema Athens, theater showtimes, movie app Greece, nearby theaters, ταινίες Ελλάδα, σινεμά Αθήνα, προβολές ταινιών"
 images = ["img/mascot-full.png"]
@@ -20,6 +21,7 @@ images = ["img/mascot-full.png"]
 # Social Links
 instagram = "https://www.instagram.com/popandgo.gr"
 tiktok = "https://www.tiktok.com/@popandgo.gr"
+facebook = "https://www.facebook.com/popandgo.gr"
 
 # App Store Links
 appStoreUrl = "https://apps.apple.com/app/6748235605"

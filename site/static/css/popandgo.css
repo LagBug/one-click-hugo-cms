@@ -146,15 +146,9 @@ body {
 }
 
 .social-icon.instagram:hover {
-    color: #E1306C;
-    background: linear-gradient(135deg, rgba(225, 48, 108, 0.15), rgba(253, 29, 29, 0.15));
-    box-shadow: 0 4px 12px rgba(225, 48, 108, 0.2);
 }
 
 .social-icon.tiktok:hover {
-    color: #000000;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-links {
@@ -1170,7 +1164,7 @@ body {
     margin: 0 auto 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    display: inline-block;
+    display: block;
 }
 
 .footer-lang-toggle:hover {
