@@ -8,7 +8,10 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
   <meta name="theme-color" content="#dc2626">
-  
+
+  <!-- Apple App Banner -->
+  <meta name="apple-itunes-app" content="app-id=6748235605, app-argument=popandgo.gr">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
@@ -24,10 +27,10 @@
   <meta property="twitter:image" content="{{ .Site.BaseURL }}img/mascot-full.png">
   
   <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="{{ "/img/favicon.ico" | relURL }}">
-  
-  <!-- Apple App Banner -->
-  <meta name="apple-itunes-app" content="app-id=6748235605, app-argument=popandgo.gr">
+  <link rel="icon" href="{{ "/img/favicon.ico" | relURL }}" sizes="any">
+  <link rel="icon" type="image/png" href="{{ "/img/mascot-only.png" | relURL }}">
+  <link rel="apple-touch-icon" href="{{ "/img/apple-icon.png" | relURL }}">
+  <link rel="manifest" href="{{ "/manifest.json" | relURL }}">
   
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
