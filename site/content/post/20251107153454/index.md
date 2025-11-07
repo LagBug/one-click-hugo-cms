@@ -9,6 +9,7 @@ description: Αν ψάχνεις έναν τρόπο να κάνεις τα πα
   φετινή σεζόν. Αν πάλι είσαι έφηβο άτομο και αναζητάς χώρο και τρόπο να
   καλλιεργήσεις την κριτική σκέψη μέσα από μια εικαστική προοπτική τότε αυτό το
   event είναι σίγουρα για εσένα.
+image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thegreekfoundation.com%2Fwp-content%2Fuploads%2F2022%2F10%2FThe_Greek_Foundation_Athens_International_childrens_film_festival_k2_Design.jpg&f=1&nofb=1&ipt=514a0aa8f7d545dead868ec6d09604908eee2bde298a78c43b0e61b515fa4431
 ---
 Από **10 έως 16 Νοεμβρίου 2025**, η Αθήνα μετατρέπεται σε έναν πολύχρωμο κινηματογραφικό παράδεισο, με **ταινίες για παιδιά και έφηβα άτομα** από κάθε γωνιά του κόσμου.
 
