@@ -1,6 +1,6 @@
 ---
-title: "8o Athens International Children’s Film Festival 2025: Ο πιο fun
-  κινηματογράφος για παιδιά και έφηβα άτομα έρχεται στην Αθήνα!"
+title: "8o Athens International Children’s Film Festival 2025: Η πιο fun
+  εμπειρία για παιδιά και εφήβους έρχεται στην Αθήνα!"
 slug: athicff-2025-paidiko-kinimatografo
 date: 2025-11-07T15:24:36.446Z
 description: Αν ψάχνεις έναν τρόπο να κάνεις τα παιδιά να αγαπήσουν ακόμη
@@ -11,7 +11,7 @@ description: Αν ψάχνεις έναν τρόπο να κάνεις τα πα
   event είναι σίγουρα για εσένα.
 image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thegreekfoundation.com%2Fwp-content%2Fuploads%2F2022%2F10%2FThe_Greek_Foundation_Athens_International_childrens_film_festival_k2_Design.jpg&f=1&nofb=1&ipt=514a0aa8f7d545dead868ec6d09604908eee2bde298a78c43b0e61b515fa4431
 ---
-Από **10 έως 16 Νοεμβρίου 2025**, η Αθήνα μετατρέπεται σε έναν πολύχρωμο κινηματογραφικό παράδεισο, με **ταινίες για παιδιά και έφηβα άτομα** από κάθε γωνιά του κόσμου.
+Από **10 έως 16 Νοεμβρίου 2025**, η Αθήνα μετατρέπεται σε έναν πολύχρωμο κινηματογραφικό παράδεισο, με **ταινίες για παιδιά και εφήβους** από κάθε γωνιά του κόσμου.
 
 Και φυσικά, το **Pop & Go** είναι εδώ για να σου δείξει **πού παίζουν οι καλύτερες οικογενειακές προβολές**, αλλά και να σου δώσει ιδέες για την πιο όμορφη σινε-βόλτα της χρονιάς!
 
