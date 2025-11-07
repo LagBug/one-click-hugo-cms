@@ -40,7 +40,7 @@ image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thegreekf
 * Για πρώτη φορά θα φιλοξενηθεί η δράση [Όλοι στο Κάδρο](https://www.athicff.com/movie/%cf%8c%ce%bb%ce%bf%ce%b9-%cf%83%cf%84%ce%bf-%ce%ba%ce%ac%ce%b4%cf%81%ce%bf/).  Η πρωτοβουλία απευθύνεται σε κοινό με και χωρίς αναπηρία, προωθώντας την έννοια της συμπερίληψης  
 * Θα πραγματοποιηθεί η δράση [ATHICFF for Professionals](https://www.athicff.com/movie/athicff-for-professionals/)
 
-- - -
+
 
 ## **🍿 Οι πιο δυνατές παιδικές-εφηβικές ταινίες του 2025**
 
@@ -56,7 +56,7 @@ image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thegreekf
   Οι ταινίες προβάλλονται στους κινηματογράφους **Κηφισιά 1 & 2 Cinemax, Δαναός και Village Cinemas Ρέντη**, στο Μέγαρο Μουσικής Αθηνών και το Γαλλικό Ινστιτούτο Αθηνών\
    ➡️ Μπορείς να δεις όλο το πρόγραμμα στο [athicff.com](https://www.athicff.com?utm_source=chatgpt.com).
 
-- - -
+
 
 ## **💡 Γιατί να το βάλεις στο πρόγραμμα σου**
 
@@ -66,7 +66,7 @@ image: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.thegreekf
 Αν αγαπάς το σινεμά, το storytelling και τις δημιουργικές εμπειρίες, τότε **μην το χάσεις**.\
 Το Pop & Go θα είναι εκεί για να σου πει **πού, πότε και πώς** να το ζήσεις στο έπακρο.
 
-- - -
+
 
 ## **🎟️ Pop & Go Tips: Πώς να οργανώσεις την κινηματογραφική σου έξοδο**
 
