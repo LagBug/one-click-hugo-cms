@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Pop&Go</title>
+  <script>
+    (function () {
+      var ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+        window.location.replace('https://apps.apple.com/app/6748235605');
+      } else if (/android/i.test(ua)) {
+        window.location.replace('https://play.google.com/store/apps/details?id=me.lagbug.popandgo');
+      } else {
+        window.location.replace('https://apps.apple.com/app/6748235605');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to the app store&hellip;</p>
+</body>
+</html>
